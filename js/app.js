@@ -15,6 +15,8 @@
    
     /* Crear elementos con DOM html al publicar contacto */
      
+    //HOLA GABY!
+    //HOLA
     
     //Asignando atributos y/o eventos
     
