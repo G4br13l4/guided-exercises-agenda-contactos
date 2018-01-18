@@ -1,9 +1,14 @@
 
   //Traer elementos del HTML
-  
+  var $nameInput = $("#name-input");
+  var $phoneInput = $("#phone-input");
   
   var loadPage = function () {
-    
+   $(".modal").modal(); // modal() es un metodo  de jquery , le da el funcionamiento de abrir. 
+   $nameInput.keyup(validateContact);
+   $phoneInput.keyup(validateContact);
+
+
   };
 
   var paintContactsInHTML = function(contact) {
@@ -42,6 +47,12 @@
 
   var validateContact = function () {
     //En esta funcion tenemos que validar que el usuario ingrese datos y no valores vacios
+    var $containerAddContact =$("#add-contact")
+    if($(this).val().trim().length > 0) {
+       $containerAddContact.removeAttr("disabled");
+    } else {
+       $containerAddContact.attr("disabled",true);
+    }
   };
 
 
